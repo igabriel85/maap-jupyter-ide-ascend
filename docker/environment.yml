@@ -2,7 +2,7 @@ name: pymaap
 channels:
   - conda-forge
   - defaults
-  - intel
+  - https://software.repos.intel.com/python/conda/
 #  - file:///home/user/btk_channel/
 #  - file:///home/user/bps_channel/
   - nodefaults

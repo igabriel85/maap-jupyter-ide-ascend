@@ -142,6 +142,7 @@ RUN rm -f $HOME/btk.tar.gz
 COPY patch/install_pack.bash  $HOME/btk/install/install_pack.bash
 COPY patch/install_bps_btk_packages.bash  $HOME/btk/install/install_bps_btk_packages.bash
 COPY patch/install_list.bash  $HOME/btk/install/install_list.bash
+COPY patch/install_channels.bash  $HOME/btk/install/install_channels.bash
 COPY patch/arepyextras_copernicus_dem_extractor-3.1.3-py3-none-any.whl $HOME/btk/libs/btkprocessor/pkgs/arepyextras_copernicus_dem_extractor-3.1.3-py3-none-any.whl
 # patch packages_to_install.py to fix missing packages
 COPY patch/packages_to_install.py $HOME/btk/install/packages_to_install.py

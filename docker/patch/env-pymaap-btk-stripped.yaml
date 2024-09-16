@@ -1,6 +1,7 @@
 channels:
   - defaults
-  - intel
+  - fastai
+  - https://software.repos.intel.com/python/conda/
   - conda-forge
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
@@ -90,7 +91,7 @@ dependencies:
   - docformatter=1.7.5=pyhd8ed1ab_0
   - docutils=0.18.1=py39h06a4308_3
   - dpcpp-cpp-rt=2023.1.0=h06a4308_46305
-  - dpcpp_cpp_rt=2024.1.2=intel_995
+  - dpcpp_cpp_rt=2024.1.2
   - elementpath=4.1.4=py39h06a4308_0
   - entrypoints=0.4=py39h06a4308_0
   - exceptiongroup=1.2.0=py39h06a4308_0
@@ -146,7 +147,6 @@ dependencies:
   - intel-cmplr-lic-rt=2023.1.0=h06a4308_46305
   - intel-opencl-rt=2023.1.0=h06a4308_46305
   - intel-openmp=2023.1.0=hdb19cb5_46306
-  - intelpython=2024.1.0=0
   - ipykernel=6.28.0=py39h06a4308_0
   - ipython_genutils=0.2.0=pyhd3eb1b0_1
   - jedi=0.18.1=py39h06a4308_1
@@ -226,7 +226,7 @@ dependencies:
   - libuuid=2.38.1=h0b41bf4_0
   - libwebp-base=1.3.2=h5eee18b_0
   - libxcb=1.15=h7f8727e_0
-  - libxml2=2.10.3=h6b0140f_0
+  - libxml2=2.10.3
   - libxslt=1.1.37=h873f0b0_0
   - libzip=1.9.2=hc929e4a_1
   - libzlib=1.2.13=hd590300_5
@@ -245,10 +245,10 @@ dependencies:
   - mdurl=0.1.0=py39h06a4308_0
   - menuinst=2.1.0=py39h06a4308_0
   - mistune=2.0.4=py39h06a4308_0
-  - mkl=2023.1.0=h213fc3f_46344
+  - mkl
   - mkl-service=2.4.0=py39h5eee18b_1
-  - mkl_fft=1.3.5=py39h28f0b46_11
-  - mkl_random=1.2.2=py39h0b06908_51
+  - mkl_fft
+  - mkl_random
   - more-itertools=10.1.0=py39h06a4308_0
   - munch=2.5.0=pyhd3eb1b0_0
   - nb_conda_kernels=2.3.1=py39h06a4308_0
@@ -274,7 +274,7 @@ dependencies:
   - numpy-base=1.23.5=py39h1e6e340_0
   - odc-geo=0.4.5=pyhd8ed1ab_0
   - odc-stac=0.3.9=pyhd8ed1ab_0
-  - opencv-python-headless=4.5.5.64=py39_2
+  - opencv-python-headless=4.5.5.64
   - openjpeg=2.5.0=h7d73246_1
   - openssl=3.1.5=h4ab18f5_1
   - overrides=7.4.0=py39h06a4308_0
@@ -451,7 +451,7 @@ dependencies:
       - jmespath==1.0.1
       - mapboxgl==0.10.2
       - moto==5.0.8
-      - mypy-boto3-s3==1.34.105 
+      - mypy-boto3-s3==1.34.105
       - owslib==0.31.0
       - responses==0.25.0
       - s3transfer==0.8.2
