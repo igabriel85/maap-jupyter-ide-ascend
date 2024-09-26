@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source /home/user/conda/etc/profile.d/conda.sh
+source /opt/conda/etc/profile.d/conda.sh
 conda activate pymaap
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib
 

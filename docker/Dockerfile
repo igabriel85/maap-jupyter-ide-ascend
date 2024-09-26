@@ -125,11 +125,15 @@ RUN \
 # Ajust permissions
 #RUN chgrp -Rf root /home/user && chmod -Rf g+w /home/user
 
+# set user as the owner of /opt
+RUN chown -R 1234:0 /opt && \
+    chmod -R g=u /opt
+
 # Set CONDA and system environment variables
-ENV CONDA_DIR /home/user/conda
+ENV CONDA_DIR /opt/conda
 ENV CONDA_MAAP_ENV "pymaap"
 ENV PATH "$PATH:$CONDA_DIR/bin"
-ENV HOME=/home/user
+#ENV HOME=/home/tooling
 
 # copy btk tar files
 COPY btk.tar.gz $HOME/btk.tar.gz
@@ -305,6 +309,9 @@ RUN chmod +x /entrypoint.sh
 USER 1234 
 # Set the working directory
 WORKDIR /projects
+
+# reset home to user
+ENV HOME=/home/user
 
 # Expose port
 EXPOSE 8888
