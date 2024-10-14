@@ -269,8 +269,8 @@ COPY hide_side_panel $HOME/hide_side_panel
 #    npm cache clean --force
 
 # Additional settings jupyter
-ENV CONFIG /home/user/.jupyter/jupyter_notebook_config.py
-ENV CONFIG_IPYTHON /home/user/.ipython/profile_default/ipython_config.py
+ENV CONFIG $HOME/.jupyter/jupyter_notebook_config.py
+ENV CONFIG_IPYTHON $HOME/.ipython/profile_default/ipython_config.py
 
 RUN jupyter notebook --generate-config --allow-root && \
     ipython profile create
@@ -297,6 +297,10 @@ RUN echo "c.NotebookApp.tornado_settings = {" >> $CONFIG && \
 USER 0
 # cleanup BTK installation
 RUN rm -f /env-pymaap-btk-stripped.yaml
+
+#ensure that xsdata is at the correct version
+RUN conda install -y xsdata==24.5
+
 # cleanup YUM repos
 RUN yum -y clean all
 # cleanup conda

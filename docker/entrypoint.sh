@@ -1,8 +1,14 @@
 #!/bin/bash
-
 source /opt/conda/etc/profile.d/conda.sh
 conda activate pymaap
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$CONDA_PREFIX/lib
+
+# check if .jupyter folder exists if not copy folder from /home/tooling
+if [ ! -d /home/user/.jupyter ];then
+  echo "[--] copying .jupyter folder from /home/tooling"
+  cp -r /home/tooling/.jupyter /home/user/
+fi
+
 
 # if [ ! -d /projects/envs ];then
 #   echo "[--] creating conda persistent environments home directory"
