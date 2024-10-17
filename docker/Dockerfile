@@ -243,6 +243,7 @@ RUN $HOME/installLib.sh
 RUN npm install typescript -g
 
 COPY hide_side_panel $HOME/hide_side_panel
+
 #RUN cd $HOME/hide_side_panel && npm install && npm run build && jupyter labextension install . --no-build
 
 # Standard Jupyter Lab extensions
@@ -293,13 +294,13 @@ RUN echo "c.NotebookApp.tornado_settings = {" >> $CONFIG && \
 # install conda-pack
 # RUN conda install -c conda-forge conda-pack
 
+#ensure that xsdata is at the correct version
+RUN conda install -y xsdata==24.5
+
 #### CLEANUP PHASE
 USER 0
 # cleanup BTK installation
 RUN rm -f /env-pymaap-btk-stripped.yaml
-
-#ensure that xsdata is at the correct version
-RUN conda install -y xsdata==24.5
 
 # cleanup YUM repos
 RUN yum -y clean all
